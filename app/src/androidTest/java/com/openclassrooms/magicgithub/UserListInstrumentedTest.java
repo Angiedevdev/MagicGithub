@@ -2,8 +2,6 @@ package com.openclassrooms.magicgithub;
 
 import com.openclassrooms.magicgithub.ui.user_list.ListUserActivity;
 import com.openclassrooms.magicgithub.utils.RecyclerViewUtils;
-
-import androidx.test.espresso.ViewInteraction;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.espresso.intent.rule.IntentsTestRule;
 import androidx.test.espresso.matcher.ViewMatchers;
@@ -49,7 +47,7 @@ public class UserListInstrumentedTest {
 
     @Test
     public void checkIfRemovingUserIsWorking() {
-        onView(withId(R.id.activity_list_user_rv))
+        onView(ViewMatchers.withId(R.id.activity_list_user_rv))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0, clickChildView(R.id.item_list_user_delete_button)));
         onView(withId(R.id.activity_list_user_rv)).check(new RecyclerViewUtils.ItemCount(currentUsersSize - 1));
     }

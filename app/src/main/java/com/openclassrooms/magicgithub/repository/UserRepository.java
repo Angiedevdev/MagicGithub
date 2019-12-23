@@ -4,8 +4,6 @@ import com.openclassrooms.magicgithub.api.ApiService;
 import com.openclassrooms.magicgithub.model.User;
 
 import java.util.List;
-import java.util.ArrayList;
-
 
 public class UserRepository {
 
@@ -26,7 +24,7 @@ public class UserRepository {
     }
 
     public void deleteUser(User user) {
-    // TODO: A modifier
+        // TODO: A modifier
         apiService.deleteUser(user);
-        }
     }
+}

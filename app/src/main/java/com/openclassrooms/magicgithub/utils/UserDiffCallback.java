@@ -25,9 +25,9 @@ public class UserDiffCallback extends DiffUtil.Callback{
         return newUsers.size();
     }
 
-    @Override // Ici modification == par .equals
+    @Override
     public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-        return oldUsers.get(oldItemPosition).getId().equals(newUsers.get(newItemPosition).getId()) ;
+        return oldUsers.get(oldItemPosition).getId() == newUsers.get(newItemPosition).getId() ;
     }
 
     @Override
